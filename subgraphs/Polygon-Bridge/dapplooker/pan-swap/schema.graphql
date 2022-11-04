@@ -1,0 +1,136 @@
+type ERC20_LockedERC20Event @entity {
+  id: ID!
+  txHash: Bytes
+  fromAddress: Bytes # address
+  toAddress: Bytes # address
+  valueTransferred: BigInt
+  gasUsed: BigInt
+  gasPrice: BigInt
+  blockTimestamp: BigInt! # uint256
+  depositor: Bytes! # address
+  depositReceiver: Bytes! # address
+  rootToken: Bytes! # address
+  amount: BigInt! # uint256
+}
+
+type ERC20_RoleAdminChangedEvent @entity {
+  id: ID!
+  txHash: Bytes
+  fromAddress: Bytes # address
+  toAddress: Bytes # address
+  valueTransferred: BigInt
+  gasUsed: BigInt
+  gasPrice: BigInt
+  blockTimestamp: BigInt! # uint256
+  role: Bytes! # bytes32
+  previousAdminRole: Bytes! # bytes32
+  newAdminRole: Bytes! # bytes32
+}
+
+type ERC20_RoleGrantedEvent @entity {
+  id: ID!
+  txHash: Bytes
+  fromAddress: Bytes # address
+  toAddress: Bytes # address
+  valueTransferred: BigInt
+  gasUsed: BigInt
+  gasPrice: BigInt
+  blockTimestamp: BigInt! # uint256
+  role: Bytes! # bytes32
+  account: Bytes! # address
+  sender: Bytes! # address
+}
+
+type ERC20_RoleRevokedEvent @entity {
+  id: ID!
+  txHash: Bytes
+  fromAddress: Bytes # address
+  toAddress: Bytes # address
+  valueTransferred: BigInt
+  gasUsed: BigInt
+  gasPrice: BigInt
+  blockTimestamp: BigInt! # uint256
+  role: Bytes! # bytes32
+  account: Bytes! # address
+  sender: Bytes! # address
+}
+
+type ERC20_exitTokensCall @entity {
+  id: ID!
+  txHash: Bytes
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  valueTransferred: BigInt
+  gasUsed: BigInt
+  gasPrice: BigInt
+  blockTimestamp: BigInt! # uint256
+  value0: Bytes! # address
+  rootToken: Bytes! # address
+  log: Bytes! # bytes
+}
+
+type ERC20_grantRoleCall @entity {
+  id: ID!
+  txHash: Bytes
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  valueTransferred: BigInt
+  gasUsed: BigInt
+  gasPrice: BigInt
+  blockTimestamp: BigInt! # uint256
+  role: Bytes! # bytes32
+  account: Bytes! # address
+}
+
+type ERC20_initializeCall @entity {
+  id: ID!
+  txHash: Bytes
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  valueTransferred: BigInt
+  gasUsed: BigInt
+  gasPrice: BigInt
+  blockTimestamp: BigInt! # uint256
+  _owner: Bytes! # address
+}
+
+type ERC20_lockTokensCall @entity {
+  id: ID!
+  txHash: Bytes
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  valueTransferred: BigInt
+  gasUsed: BigInt
+  gasPrice: BigInt
+  blockTimestamp: BigInt! # uint256
+  depositor: Bytes! # address
+  depositReceiver: Bytes! # address
+  rootToken: Bytes! # address
+  depositData: Bytes! # bytes
+}
+
+type ERC20_renounceRoleCall @entity {
+  id: ID!
+  txHash: Bytes
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  valueTransferred: BigInt
+  gasUsed: BigInt
+  gasPrice: BigInt
+  blockTimestamp: BigInt! # uint256
+  role: Bytes! # bytes32
+  account: Bytes! # address
+}
+
+type ERC20_revokeRoleCall @entity {
+  id: ID!
+  txHash: Bytes
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  valueTransferred: BigInt
+  gasUsed: BigInt
+  gasPrice: BigInt
+  blockTimestamp: BigInt! # uint256
+  role: Bytes! # bytes32
+  account: Bytes! # address
+}

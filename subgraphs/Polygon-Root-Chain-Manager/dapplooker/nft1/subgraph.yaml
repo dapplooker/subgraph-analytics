@@ -1,0 +1,57 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: RCM_
+    network: mainnet
+    source:
+      address: "0xA0c68C638235ee32657e8f720a23ceC1bFc77C77"
+      abi: RCM_
+      startBlock: 10735437
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - RCM_MetaTransactionExecutedEvent
+        - RCM_PredicateRegisteredEvent
+        - RCM_RoleAdminChangedEvent
+        - RCM_RoleGrantedEvent
+        - RCM_RoleRevokedEvent
+        - RCM_TokenMappedEvent
+        - RCM_cleanMapTokenCall
+        - RCM_depositEtherForCall
+        - RCM_depositForCall
+        - RCM_executeMetaTransactionCall
+        - RCM_exitCall
+        - RCM_grantRoleCall
+        - RCM_initializeCall
+        - RCM_initializeEIP712Call
+        - RCM_mapTokenCall
+        - RCM_registerPredicateCall
+        - RCM_remapTokenCall
+        - RCM_renounceRoleCall
+        - RCM_revokeRoleCall
+        - RCM_setCheckpointManagerCall
+        - RCM_setChildChainManagerAddressCall
+        - RCM_setStateSenderCall
+        - RCM_setupContractIdCall
+      abis:
+        - name: RCM_
+          file: ./abis/RCM_.json
+
+      eventHandlers:
+        - event: MetaTransactionExecuted(address,address,bytes)
+          handler: handleMetaTransactionExecutedEvent
+        - event: PredicateRegistered(indexed bytes32,indexed address)
+          handler: handlePredicateRegisteredEvent
+        - event: RoleAdminChanged(indexed bytes32,indexed bytes32,indexed bytes32)
+          handler: handleRoleAdminChangedEvent
+        - event: RoleGranted(indexed bytes32,indexed address,indexed address)
+          handler: handleRoleGrantedEvent
+        - event: RoleRevoked(indexed bytes32,indexed address,indexed address)
+          handler: handleRoleRevokedEvent
+        - event: TokenMapped(indexed address,indexed address,indexed bytes32)
+          handler: handleTokenMappedEvent
+      file: ./src/RCM_Mapping.ts

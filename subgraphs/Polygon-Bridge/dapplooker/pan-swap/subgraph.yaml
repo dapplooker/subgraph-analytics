@@ -1,0 +1,52 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: ERC20_
+    network: mainnet
+    source:
+      address: "0x40ec5B33f54e0E8A33A975908C5BA1c14e5BbbDf"
+      abi: ERC20_
+      startBlock: 10735445
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - ERC20_LockedERC20Event
+        - ERC20_RoleAdminChangedEvent
+        - ERC20_RoleGrantedEvent
+        - ERC20_RoleRevokedEvent
+        - ERC20_exitTokensCall
+        - ERC20_grantRoleCall
+        - ERC20_initializeCall
+        - ERC20_lockTokensCall
+        - ERC20_renounceRoleCall
+        - ERC20_revokeRoleCall
+      abis:
+        - name: ERC20_
+          file: ./abis/ERC20_.json
+      callHandlers:
+        - function: exitTokens(address,address,bytes)
+          handler: handleexitTokensCall
+        - function: grantRole(bytes32,address)
+          handler: handlegrantRoleCall
+        - function: initialize(address)
+          handler: handleinitializeCall
+        - function: lockTokens(address,address,address,bytes)
+          handler: handlelockTokensCall
+        - function: renounceRole(bytes32,address)
+          handler: handlerenounceRoleCall
+        - function: revokeRole(bytes32,address)
+          handler: handlerevokeRoleCall
+      eventHandlers:
+        - event: LockedERC20(indexed address,indexed address,indexed address,uint256)
+          handler: handleLockedERC20Event
+        - event: RoleAdminChanged(indexed bytes32,indexed bytes32,indexed bytes32)
+          handler: handleRoleAdminChangedEvent
+        - event: RoleGranted(indexed bytes32,indexed address,indexed address)
+          handler: handleRoleGrantedEvent
+        - event: RoleRevoked(indexed bytes32,indexed address,indexed address)
+          handler: handleRoleRevokedEvent
+      file: ./src/ERC20_Mapping.ts
