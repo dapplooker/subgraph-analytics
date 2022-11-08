@@ -1,0 +1,23 @@
+specVersion: 0.0.4
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: erc20
+    network: moonbeam
+    source:
+      address: "0xFfFFfFff1FcaCBd218EDc0EbA20Fc2308C778080"
+      abi: erc20
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - TransferEntity
+      abis:
+        - name: erc20
+          file: ./abis/erc20.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/erc-20.ts
