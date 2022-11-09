@@ -4,7 +4,7 @@ A brief description of what this project does and who it's for
 
 |        Project     | Subgraph     |       Dashboard          |  Status   |
 | :----------------- | :----------- | :------------------------|:--------  |
-|         Aztec      |:ethereum:              |                          |           |
+|         Aztec      |:celo_icon:              |                          |           |
 |     Moonbeam-XCM   |              |                          |           |
 |     Celo-Tokens    |              |                          |           |
 |      Moola-v2      |              |                          |           |
