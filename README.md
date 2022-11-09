@@ -4,7 +4,7 @@ A brief description of what this project does and who it's for
 
 |        Project     | Subgraph     |       Dashboard          |  Status   |
 | :-----------------: | :-----------: | :------------------------:|:--------:  |
-|Ethereum Networks|              |             |             |
+|`Ethereum Networks`|              |             |             |
 |         Aztec      |<img src="images/favicon.ico" width="30" height="30">            |                          |           |
 |     Moonbeam-XCM   |<img src="images/favicon.ico" width="30" height="30">              |                          |           |
 |      Moola-v2      |<img src="images/favicon.ico" width="30" height="30">              |                          |           |
