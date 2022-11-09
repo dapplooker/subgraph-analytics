@@ -4,7 +4,7 @@ A brief description of what this project does and who it's for
 
 |        Project     | Subgraph     |       Dashboard          |  Status   |
 | :----------------- | :----------- | :------------------------|:--------  |
-|         Aztec      |[![images\ether.png](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)              |                          |           |
+|         Aztec      |[![images\ether.png](https://img.shields.io/badge/License-MIT-green.svg)]              |                          |           |
 |     Moonbeam-XCM   |              |                          |           |
 |     Celo-Tokens    |              |                          |           |
 |      Moola-v2      |              |                          |           |
