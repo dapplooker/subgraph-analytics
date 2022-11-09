@@ -5,7 +5,7 @@ A brief description of what this project does and who it's for
 |        Project     | Subgraph     |       Dashboard          |  Status   |
 | :-----------------: | :-----------: | :------------------------:|:--------:  |
 |**Ethereum Networks**|              |             |             |
-|         Aztec      |<img src="images/favicon.ico" width="30" height="30">![](subgraphs/aztec-network)           |                          |           |
+|         Aztec      |<img src="images/favicon.ico" width="30" height="30"![](subgraphs/aztec-network)>           |                          |           |
 |     Moonbeam-XCM   |<img src="images/favicon.ico" width="30" height="30">              |                          |           |
 |      Moola-v2      |<img src="images/favicon.ico" width="30" height="30">              |                          |           |
 |       Paraswap     |<img src="images/favicon.ico" width="25" height="25">              |                          |           |
