@@ -11,7 +11,7 @@ import {
   BigDecimal
 } from "@graphprotocol/graph-ts";
 
-export class RCMMetaTransactionExecutedEvent extends Entity {
+export class MetaTransactionExecutedEvent extends Entity {
   constructor(id: string) {
     super();
     this.set("id", Value.fromString(id));
@@ -21,20 +21,20 @@ export class RCMMetaTransactionExecutedEvent extends Entity {
     let id = this.get("id");
     assert(
       id != null,
-      "Cannot save RCMMetaTransactionExecutedEvent entity without an ID"
+      "Cannot save MetaTransactionExecutedEvent entity without an ID"
     );
     if (id) {
       assert(
         id.kind == ValueKind.STRING,
-        `Entities of type RCMMetaTransactionExecutedEvent must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
+        `Entities of type MetaTransactionExecutedEvent must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
       );
-      store.set("RCMMetaTransactionExecutedEvent", id.toString(), this);
+      store.set("MetaTransactionExecutedEvent", id.toString(), this);
     }
   }
 
-  static load(id: string): RCMMetaTransactionExecutedEvent | null {
-    return changetype<RCMMetaTransactionExecutedEvent | null>(
-      store.get("RCMMetaTransactionExecutedEvent", id)
+  static load(id: string): MetaTransactionExecutedEvent | null {
+    return changetype<MetaTransactionExecutedEvent | null>(
+      store.get("MetaTransactionExecutedEvent", id)
     );
   }
 
@@ -186,7 +186,7 @@ export class RCMMetaTransactionExecutedEvent extends Entity {
   }
 }
 
-export class RCMPredicateRegisteredEvent extends Entity {
+export class PredicateRegisteredEvent extends Entity {
   constructor(id: string) {
     super();
     this.set("id", Value.fromString(id));
@@ -196,20 +196,20 @@ export class RCMPredicateRegisteredEvent extends Entity {
     let id = this.get("id");
     assert(
       id != null,
-      "Cannot save RCMPredicateRegisteredEvent entity without an ID"
+      "Cannot save PredicateRegisteredEvent entity without an ID"
     );
     if (id) {
       assert(
         id.kind == ValueKind.STRING,
-        `Entities of type RCMPredicateRegisteredEvent must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
+        `Entities of type PredicateRegisteredEvent must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
       );
-      store.set("RCMPredicateRegisteredEvent", id.toString(), this);
+      store.set("PredicateRegisteredEvent", id.toString(), this);
     }
   }
 
-  static load(id: string): RCMPredicateRegisteredEvent | null {
-    return changetype<RCMPredicateRegisteredEvent | null>(
-      store.get("RCMPredicateRegisteredEvent", id)
+  static load(id: string): PredicateRegisteredEvent | null {
+    return changetype<PredicateRegisteredEvent | null>(
+      store.get("PredicateRegisteredEvent", id)
     );
   }
 
@@ -352,7 +352,7 @@ export class RCMPredicateRegisteredEvent extends Entity {
   }
 }
 
-export class RCMRoleAdminChangedEvent extends Entity {
+export class RoleAdminChangedEvent extends Entity {
   constructor(id: string) {
     super();
     this.set("id", Value.fromString(id));
@@ -362,20 +362,20 @@ export class RCMRoleAdminChangedEvent extends Entity {
     let id = this.get("id");
     assert(
       id != null,
-      "Cannot save RCMRoleAdminChangedEvent entity without an ID"
+      "Cannot save RoleAdminChangedEvent entity without an ID"
     );
     if (id) {
       assert(
         id.kind == ValueKind.STRING,
-        `Entities of type RCMRoleAdminChangedEvent must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
+        `Entities of type RoleAdminChangedEvent must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
       );
-      store.set("RCMRoleAdminChangedEvent", id.toString(), this);
+      store.set("RoleAdminChangedEvent", id.toString(), this);
     }
   }
 
-  static load(id: string): RCMRoleAdminChangedEvent | null {
-    return changetype<RCMRoleAdminChangedEvent | null>(
-      store.get("RCMRoleAdminChangedEvent", id)
+  static load(id: string): RoleAdminChangedEvent | null {
+    return changetype<RoleAdminChangedEvent | null>(
+      store.get("RoleAdminChangedEvent", id)
     );
   }
 
@@ -527,7 +527,7 @@ export class RCMRoleAdminChangedEvent extends Entity {
   }
 }
 
-export class RCMRoleGrantedEvent extends Entity {
+export class RoleGrantedEvent extends Entity {
   constructor(id: string) {
     super();
     this.set("id", Value.fromString(id));
@@ -535,19 +535,19 @@ export class RCMRoleGrantedEvent extends Entity {
 
   save(): void {
     let id = this.get("id");
-    assert(id != null, "Cannot save RCMRoleGrantedEvent entity without an ID");
+    assert(id != null, "Cannot save RoleGrantedEvent entity without an ID");
     if (id) {
       assert(
         id.kind == ValueKind.STRING,
-        `Entities of type RCMRoleGrantedEvent must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
+        `Entities of type RoleGrantedEvent must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
       );
-      store.set("RCMRoleGrantedEvent", id.toString(), this);
+      store.set("RoleGrantedEvent", id.toString(), this);
     }
   }
 
-  static load(id: string): RCMRoleGrantedEvent | null {
-    return changetype<RCMRoleGrantedEvent | null>(
-      store.get("RCMRoleGrantedEvent", id)
+  static load(id: string): RoleGrantedEvent | null {
+    return changetype<RoleGrantedEvent | null>(
+      store.get("RoleGrantedEvent", id)
     );
   }
 
@@ -699,7 +699,7 @@ export class RCMRoleGrantedEvent extends Entity {
   }
 }
 
-export class RCMRoleRevokedEvent extends Entity {
+export class RoleRevokedEvent extends Entity {
   constructor(id: string) {
     super();
     this.set("id", Value.fromString(id));
@@ -707,19 +707,19 @@ export class RCMRoleRevokedEvent extends Entity {
 
   save(): void {
     let id = this.get("id");
-    assert(id != null, "Cannot save RCMRoleRevokedEvent entity without an ID");
+    assert(id != null, "Cannot save RoleRevokedEvent entity without an ID");
     if (id) {
       assert(
         id.kind == ValueKind.STRING,
-        `Entities of type RCMRoleRevokedEvent must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
+        `Entities of type RoleRevokedEvent must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
       );
-      store.set("RCMRoleRevokedEvent", id.toString(), this);
+      store.set("RoleRevokedEvent", id.toString(), this);
     }
   }
 
-  static load(id: string): RCMRoleRevokedEvent | null {
-    return changetype<RCMRoleRevokedEvent | null>(
-      store.get("RCMRoleRevokedEvent", id)
+  static load(id: string): RoleRevokedEvent | null {
+    return changetype<RoleRevokedEvent | null>(
+      store.get("RoleRevokedEvent", id)
     );
   }
 
@@ -871,7 +871,7 @@ export class RCMRoleRevokedEvent extends Entity {
   }
 }
 
-export class RCMTokenMappedEvent extends Entity {
+export class TokenMappedEvent extends Entity {
   constructor(id: string) {
     super();
     this.set("id", Value.fromString(id));
@@ -879,19 +879,19 @@ export class RCMTokenMappedEvent extends Entity {
 
   save(): void {
     let id = this.get("id");
-    assert(id != null, "Cannot save RCMTokenMappedEvent entity without an ID");
+    assert(id != null, "Cannot save TokenMappedEvent entity without an ID");
     if (id) {
       assert(
         id.kind == ValueKind.STRING,
-        `Entities of type RCMTokenMappedEvent must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
+        `Entities of type TokenMappedEvent must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
       );
-      store.set("RCMTokenMappedEvent", id.toString(), this);
+      store.set("TokenMappedEvent", id.toString(), this);
     }
   }
 
-  static load(id: string): RCMTokenMappedEvent | null {
-    return changetype<RCMTokenMappedEvent | null>(
-      store.get("RCMTokenMappedEvent", id)
+  static load(id: string): TokenMappedEvent | null {
+    return changetype<TokenMappedEvent | null>(
+      store.get("TokenMappedEvent", id)
     );
   }
 

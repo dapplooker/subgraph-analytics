@@ -14,29 +14,29 @@ dataSources:
       apiVersion: 0.0.7
       language: wasm/assemblyscript
       entities:
-        - RCMMetaTransactionExecutedEvent
-        - RCMPredicateRegisteredEvent
-        - RCMRoleAdminChangedEvent
-        - RCMRoleGrantedEvent
-        - RCMRoleRevokedEvent
-        - RCMTokenMappedEvent
-        - RCMcleanMapTokenCall
-        - RCMdepositEtherForCall
-        - RCMdepositForCall
-        - RCMexecuteMetaTransactionCall
-        - RCMexitCall
-        - RCMgrantRoleCall
-        - RCMinitializeCall
-        - RCMinitializeEIP712Call
-        - RCMmapTokenCall
-        - RCMregisterPredicateCall
-        - RCMremapTokenCall
-        - RCMrenounceRoleCall
-        - RCMrevokeRoleCall
-        - RCMsetCheckpointManagerCall
-        - RCMsetChildChainManagerAddressCall
-        - RCMsetStateSenderCall
-        - RCMsetupContractIdCall
+        - MetaTransactionExecutedEvent
+        - PredicateRegisteredEvent
+        - RoleAdminChangedEvent
+        - RoleGrantedEvent
+        - RoleRevokedEvent
+        - TokenMappedEvent
+        - cleanMapTokenCall
+        - depositEtherForCall
+        - depositForCall
+        - executeMetaTransactionCall
+        - exitCall
+        - grantRoleCall
+        - initializeCall
+        - initializeEIP712Call
+        - mapTokenCall
+        - registerPredicateCall
+        - remapTokenCall
+        - renounceRoleCall
+        - revokeRoleCall
+        - setCheckpointManagerCall
+        - setChildChainManagerAddressCall
+        - setStateSenderCall
+        - setupContractIdCall
       abis:
         - name: RCM
           file: ./abis/RCM.json
@@ -60,4 +60,4 @@ dataSources:
         - event: TokenMapped(indexed address,indexed address,indexed bytes32)
           handler: handleTokenMappedEvent
           receipt: true
-      file: ./src/RCMMapping.ts
+      file: ./src/Mapping.ts
