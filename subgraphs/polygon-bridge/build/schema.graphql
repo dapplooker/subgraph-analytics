@@ -1,4 +1,4 @@
-type ERC20LockedERC20Event @entity {
+type LockedERC20Event@entity {
   id: ID!
   txHash: Bytes
   fromAddress: Bytes # address
@@ -13,49 +13,11 @@ type ERC20LockedERC20Event @entity {
   amount: BigInt! # uint256
 }
 
-type ERC20RoleAdminChangedEvent @entity {
-  id: ID!
-  txHash: Bytes
-  fromAddress: Bytes # address
-  toAddress: Bytes # address
-  valueTransferred: BigInt
-  gasUsed: BigInt
-  gasPrice: BigInt
-  blockTimestamp: BigInt! # uint256
-  role: Bytes! # bytes32
-  previousAdminRole: Bytes! # bytes32
-  newAdminRole: Bytes! # bytes32
-}
 
-type ERC20RoleGrantedEvent @entity {
-  id: ID!
-  txHash: Bytes
-  fromAddress: Bytes # address
-  toAddress: Bytes # address
-  valueTransferred: BigInt
-  gasUsed: BigInt
-  gasPrice: BigInt
-  blockTimestamp: BigInt! # uint256
-  role: Bytes! # bytes32
-  account: Bytes! # address
-  sender: Bytes! # address
-}
 
-type ERC20RoleRevokedEvent @entity {
-  id: ID!
-  txHash: Bytes
-  fromAddress: Bytes # address
-  toAddress: Bytes # address
-  valueTransferred: BigInt
-  gasUsed: BigInt
-  gasPrice: BigInt
-  blockTimestamp: BigInt! # uint256
-  role: Bytes! # bytes32
-  account: Bytes! # address
-  sender: Bytes! # address
-}
 
-type ERC20exitTokensCall @entity {
+
+type ExitTokensCall @entity {
   id: ID!
   txHash: Bytes
   fromAddress: Bytes! # address
@@ -69,32 +31,10 @@ type ERC20exitTokensCall @entity {
   log: Bytes! # bytes
 }
 
-type ERC20grantRoleCall @entity {
-  id: ID!
-  txHash: Bytes
-  fromAddress: Bytes! # address
-  toAddress: Bytes # address
-  valueTransferred: BigInt
-  gasUsed: BigInt
-  gasPrice: BigInt
-  blockTimestamp: BigInt! # uint256
-  role: Bytes! # bytes32
-  account: Bytes! # address
-}
 
-type ERC20initializeCall @entity {
-  id: ID!
-  txHash: Bytes
-  fromAddress: Bytes! # address
-  toAddress: Bytes # address
-  valueTransferred: BigInt
-  gasUsed: BigInt
-  gasPrice: BigInt
-  blockTimestamp: BigInt! # uint256
-  _owner: Bytes! # address
-}
 
-type ERC20lockTokensCall @entity {
+
+type LockTokensCall @entity {
   id: ID!
   txHash: Bytes
   fromAddress: Bytes! # address
@@ -109,28 +49,5 @@ type ERC20lockTokensCall @entity {
   depositData: Bytes! # bytes
 }
 
-type ERC20renounceRoleCall @entity {
-  id: ID!
-  txHash: Bytes
-  fromAddress: Bytes! # address
-  toAddress: Bytes # address
-  valueTransferred: BigInt
-  gasUsed: BigInt
-  gasPrice: BigInt
-  blockTimestamp: BigInt! # uint256
-  role: Bytes! # bytes32
-  account: Bytes! # address
-}
 
-type ERC20revokeRoleCall @entity {
-  id: ID!
-  txHash: Bytes
-  fromAddress: Bytes! # address
-  toAddress: Bytes # address
-  valueTransferred: BigInt
-  gasUsed: BigInt
-  gasPrice: BigInt
-  blockTimestamp: BigInt! # uint256
-  role: Bytes! # bytes32
-  account: Bytes! # address
-}
+

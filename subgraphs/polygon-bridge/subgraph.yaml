@@ -14,10 +14,9 @@ dataSources:
       apiVersion: 0.0.7
       language: wasm/assemblyscript
       entities:
-        - ERC20LockedERC20Event
-        - ERC20exitTokensCall
-        - ERC20lockTokensCall
-        
+        - LockedERC20Event
+        - ExitTokensCall
+        - LockTokensCall
       abis:
         - name: ERC20
           file: ./abis/ERC20.json
@@ -29,6 +28,4 @@ dataSources:
       eventHandlers:
         - event: LockedERC20(indexed address,indexed address,indexed address,uint256)
           handler: handleLockedERC20Event
-          receipt: true
-        
       file: ./src/Mapping.ts

@@ -1,4 +1,4 @@
-type RCMMetaTransactionExecutedEvent @entity {
+type MetaTransactionExecutedEvent @entity {
   id: ID!
   txHash: Bytes
   fromAddress: Bytes # address
@@ -12,7 +12,7 @@ type RCMMetaTransactionExecutedEvent @entity {
   functionSignature: Bytes! # bytes
 }
 
-type RCMPredicateRegisteredEvent @entity {
+type PredicateRegisteredEvent @entity {
   id: ID!
   txHash: Bytes
   fromAddress: Bytes # address
@@ -25,7 +25,7 @@ type RCMPredicateRegisteredEvent @entity {
   predicateAddress: Bytes! # address
 }
 
-type RCMRoleAdminChangedEvent @entity {
+type RoleAdminChangedEvent @entity {
   id: ID!
   txHash: Bytes
   fromAddress: Bytes # address
@@ -39,7 +39,7 @@ type RCMRoleAdminChangedEvent @entity {
   newAdminRole: Bytes! # bytes32
 }
 
-type RCMRoleGrantedEvent @entity {
+type RoleGrantedEvent @entity {
   id: ID!
   txHash: Bytes
   fromAddress: Bytes # address
@@ -53,7 +53,7 @@ type RCMRoleGrantedEvent @entity {
   sender: Bytes! # address
 }
 
-type RCMRoleRevokedEvent @entity {
+type RoleRevokedEvent @entity {
   id: ID!
   txHash: Bytes
   fromAddress: Bytes # address
@@ -67,7 +67,7 @@ type RCMRoleRevokedEvent @entity {
   sender: Bytes! # address
 }
 
-type RCMTokenMappedEvent @entity {
+type TokenMappedEvent @entity {
   id: ID!
   txHash: Bytes
   fromAddress: Bytes # address

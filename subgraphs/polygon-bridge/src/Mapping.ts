@@ -1,10 +1,9 @@
 import {
-  LockedERC20 as LockedERC20Event,
+  LockedERC20 as LockedERC20Event
 } from "../generated/ERC20/ERC20"
 import {
   ExitTokensCall,
   LockTokensCall
-  
 } from "../generated/ERC20/ERC20"
 import {
   LockedERC20Event as LockedERC20EventSchema
@@ -13,7 +12,6 @@ import {
 import {
   ExitTokensCall as ExitTokensCallSchema,
   LockTokensCall as LockTokensCallSchema
- 
 } from "../generated/schema"
 
 export function handleLockedERC20Event(event: LockedERC20Event): void {
@@ -24,7 +22,7 @@ export function handleLockedERC20Event(event: LockedERC20Event): void {
   entity.fromAddress = event.transaction.from
   entity.toAddress = event.transaction.to
   entity.valueTransferred = event.transaction.value
-  entity.gasUsed = event.receipt!.gasUsed
+  entity.gasUsed = event.transaction.gasLimit
   entity.gasPrice = event.transaction.gasPrice
   entity.blockTimestamp = event.block.timestamp
   entity.depositor = event.params.depositor
@@ -33,9 +31,6 @@ export function handleLockedERC20Event(event: LockedERC20Event): void {
   entity.amount = event.params.amount
   entity.save()
 }
-
-
-
 
 export function handleexitTokensCall(call: ExitTokensCall): void {
   let id = call.transaction.hash.toHex()
@@ -52,7 +47,6 @@ export function handleexitTokensCall(call: ExitTokensCall): void {
   entity.log = call.inputs.log
   entity.save()
 }
-
 
 
 

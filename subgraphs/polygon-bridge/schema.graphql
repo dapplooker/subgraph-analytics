@@ -1,4 +1,4 @@
-type LockedERC20Event @entity {
+type LockedERC20Event@entity {
   id: ID!
   txHash: Bytes
   fromAddress: Bytes # address
@@ -15,7 +15,26 @@ type LockedERC20Event @entity {
 
 
 
-type lockTokensCall @entity {
+
+
+type ExitTokensCall @entity {
+  id: ID!
+  txHash: Bytes
+  fromAddress: Bytes! # address
+  toAddress: Bytes # address
+  valueTransferred: BigInt
+  gasUsed: BigInt
+  gasPrice: BigInt
+  blockTimestamp: BigInt! # uint256
+  value0: Bytes! # address
+  rootToken: Bytes! # address
+  log: Bytes! # bytes
+}
+
+
+
+
+type LockTokensCall @entity {
   id: ID!
   txHash: Bytes
   fromAddress: Bytes! # address

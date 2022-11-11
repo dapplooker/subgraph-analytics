@@ -8,19 +8,19 @@ import {
 } from "../generated/RCM/RCM"
 import {} from "../generated/RCM/RCM"
 import {
-  RCMMetaTransactionExecutedEvent as RCMMetaTransactionExecutedEventSchema,
-  RCMPredicateRegisteredEvent as RCMPredicateRegisteredEventSchema,
-  RCMRoleAdminChangedEvent as RCMRoleAdminChangedEventSchema,
-  RCMRoleGrantedEvent as RCMRoleGrantedEventSchema,
-  RCMRoleRevokedEvent as RCMRoleRevokedEventSchema,
-  RCMTokenMappedEvent as RCMTokenMappedEventSchema
+  MetaTransactionExecutedEvent as MetaTransactionExecutedEventSchema,
+  PredicateRegisteredEvent as PredicateRegisteredEventSchema,
+  RoleAdminChangedEvent as RoleAdminChangedEventSchema,
+  RoleGrantedEvent as RoleGrantedEventSchema,
+  RoleRevokedEvent as RoleRevokedEventSchema,
+  TokenMappedEvent as TokenMappedEventSchema
 } from "../generated/schema"
 import {} from "../generated/schema"
 
 export function handleMetaTransactionExecutedEvent(
   event: MetaTransactionExecutedEvent
 ): void {
-  let entity = new RCMMetaTransactionExecutedEventSchema(
+  let entity = new MetaTransactionExecutedEventSchema(
     event.transaction.hash.toHex() + "-" + event.logIndex.toString()
   )
   entity.txHash = event.transaction.hash
@@ -39,7 +39,7 @@ export function handleMetaTransactionExecutedEvent(
 export function handlePredicateRegisteredEvent(
   event: PredicateRegisteredEvent
 ): void {
-  let entity = new RCMPredicateRegisteredEventSchema(
+  let entity = new PredicateRegisteredEventSchema(
     event.transaction.hash.toHex() + "-" + event.logIndex.toString()
   )
   entity.txHash = event.transaction.hash
@@ -57,7 +57,7 @@ export function handlePredicateRegisteredEvent(
 export function handleRoleAdminChangedEvent(
   event: RoleAdminChangedEvent
 ): void {
-  let entity = new RCMRoleAdminChangedEventSchema(
+  let entity = new RoleAdminChangedEventSchema(
     event.transaction.hash.toHex() + "-" + event.logIndex.toString()
   )
   entity.txHash = event.transaction.hash
@@ -74,7 +74,7 @@ export function handleRoleAdminChangedEvent(
 }
 
 export function handleRoleGrantedEvent(event: RoleGrantedEvent): void {
-  let entity = new RCMRoleGrantedEventSchema(
+  let entity = new RoleGrantedEventSchema(
     event.transaction.hash.toHex() + "-" + event.logIndex.toString()
   )
   entity.txHash = event.transaction.hash
@@ -91,7 +91,7 @@ export function handleRoleGrantedEvent(event: RoleGrantedEvent): void {
 }
 
 export function handleRoleRevokedEvent(event: RoleRevokedEvent): void {
-  let entity = new RCMRoleRevokedEventSchema(
+  let entity = new RoleRevokedEventSchema(
     event.transaction.hash.toHex() + "-" + event.logIndex.toString()
   )
   entity.txHash = event.transaction.hash
@@ -108,7 +108,7 @@ export function handleRoleRevokedEvent(event: RoleRevokedEvent): void {
 }
 
 export function handleTokenMappedEvent(event: TokenMappedEvent): void {
-  let entity = new RCMTokenMappedEventSchema(
+  let entity = new TokenMappedEventSchema(
     event.transaction.hash.toHex() + "-" + event.logIndex.toString()
   )
   entity.txHash = event.transaction.hash
