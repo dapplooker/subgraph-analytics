@@ -1,0 +1,13 @@
+type TransferEntity @entity {
+  id: ID!
+  txHash: Bytes
+  fromAddress: Bytes # address
+  toAddress: Bytes # address
+  valueTransferred: BigInt
+  gasUsed: BigInt
+  gasPrice: BigInt
+  blockTimestamp: BigInt! # uint256
+  from: Bytes! # address
+  to: Bytes! # address
+  value: BigInt! # uint256
+}
