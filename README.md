@@ -15,9 +15,9 @@ This repo contains subgraphs driven analytics built using DappLooker platform. A
 
 # Subgraph and Dashboard
 
-🔨 = In progress.
-🛠 = Feature complete. Additional testing required.
-✅ = Production-ready.
+🔨= In progress.
+🛠= Feature complete. Additional testing required.
+✅= Production-ready.
 
 |        Project     | Subgraph     |       Dashboard          |  Status   |
 | :-----------------: | :-----------: | :------------------------:|:--------:  |
