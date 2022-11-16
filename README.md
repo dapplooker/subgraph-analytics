@@ -1,4 +1,4 @@
-# Subgraph Analytics
+# Subgraph Analytics 📊
 
 This repo contains subgraphs driven analytics built using DappLooker platform. Any subgraph can be integrated to DappLooker platform for custom dashboards and analytics. Our goal is to integrate high quality subgraphs to DappLooker platform and provide analytics solution for every web3 protocol in the space.
 
