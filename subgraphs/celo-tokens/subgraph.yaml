@@ -163,4 +163,111 @@ dataSources:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
       file: ./src/mappings/core.ts
-
+  - kind: ethereum/contract
+    name: NCT
+    network: celo
+    source:
+      address: "0x02De4766C272abc10Bc88c220D214A26960a7e92"
+      abi: NCT
+      startBlock: 14265450
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Token
+      abis:
+        - name: NCT
+          file: ./abis/nct.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+        - name: ERC20SymbolBytes
+          file: ./abis/ERC20SymbolBytes.json
+        - name: ERC20NameBytes
+          file: ./abis/ERC20NameBytes.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/mappings/core.ts
+  - kind: ethereum/contract
+    name: USDC
+    network: celo
+    source:
+      address: "0x37f750B7cC259A2f741AF45294f6a16572CF5cAd"
+      abi: USDC
+      startBlock: 13587390
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Token
+      abis:
+        - name: USDC
+          file: ./abis/ERC20.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+        - name: ERC20SymbolBytes
+          file: ./abis/ERC20SymbolBytes.json
+        - name: ERC20NameBytes
+          file: ./abis/ERC20NameBytes.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/mappings/core.ts
+  - kind: ethereum/contract
+    name: WETH
+    network: celo
+    source:
+      address: "0x66803FB87aBd4aaC3cbB3fAd7C3aa01f6F3FB207"
+      abi: WETH
+      startBlock: 13533270
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Token
+      abis:
+        - name: WETH
+          file: ./abis/ERC20.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+        - name: ERC20SymbolBytes
+          file: ./abis/ERC20SymbolBytes.json
+        - name: ERC20NameBytes
+          file: ./abis/ERC20NameBytes.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/mappings/core.ts
+  - kind: ethereum/contract
+    name: cMCO2
+    network: celo
+    source:
+      address: "0x32A9FE697a32135BFd313a6Ac28792DaE4D9979d"
+      abi: cMCO2
+      startBlock: 5916560
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Token
+      abis:
+        - name: cMCO2
+          file: ./abis/cmco2.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+        - name: ERC20SymbolBytes
+          file: ./abis/ERC20SymbolBytes.json
+        - name: ERC20NameBytes
+          file: ./abis/ERC20NameBytes.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/mappings/core.ts

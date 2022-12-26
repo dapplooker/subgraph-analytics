@@ -18,17 +18,17 @@ dataSources:
         - Token
       abis:
         - name: celotoken
-          file: celotoken\abis\celo.json
+          file: celotoken/abis/celo.json
         - name: ERC20
-          file: celotoken\abis\ERC20.json
+          file: celotoken/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: celotoken\abis\ERC20SymbolBytes.json
+          file: celotoken/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: celotoken\abis\ERC20NameBytes.json
+          file: celotoken/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
-      file: celotoken\celotoken.wasm
+      file: celotoken/celotoken.wasm
   - kind: ethereum/contract
     name: cReal
     network: celo
@@ -45,17 +45,17 @@ dataSources:
         - Token
       abis:
         - name: cReal
-          file: cReal\abis\Moo.json
+          file: cReal/abis/Moo.json
         - name: ERC20
-          file: cReal\abis\ERC20.json
+          file: cReal/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: cReal\abis\ERC20SymbolBytes.json
+          file: cReal/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: cReal\abis\ERC20NameBytes.json
+          file: cReal/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
-      file: celotoken\celotoken.wasm
+      file: celotoken/celotoken.wasm
   - kind: ethereum/contract
     name: cEUR
     network: celo
@@ -72,17 +72,17 @@ dataSources:
         - Token
       abis:
         - name: cEUR
-          file: cEUR\abis\Moo.json
+          file: cEUR/abis/Moo.json
         - name: ERC20
-          file: cEUR\abis\ERC20.json
+          file: cEUR/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: cEUR\abis\ERC20SymbolBytes.json
+          file: cEUR/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: cEUR\abis\ERC20NameBytes.json
+          file: cEUR/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
-      file: celotoken\celotoken.wasm
+      file: celotoken/celotoken.wasm
   - kind: ethereum/contract
     name: cUSD
     network: celo
@@ -99,17 +99,17 @@ dataSources:
         - Token
       abis:
         - name: cUSD
-          file: cUSD\abis\Moo.json
+          file: cUSD/abis/Moo.json
         - name: ERC20
-          file: cUSD\abis\ERC20.json
+          file: cUSD/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: cUSD\abis\ERC20SymbolBytes.json
+          file: cUSD/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: cUSD\abis\ERC20NameBytes.json
+          file: cUSD/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
-      file: celotoken\celotoken.wasm
+      file: celotoken/celotoken.wasm
   - kind: ethereum/contract
     name: stCELO
     network: celo
@@ -126,14 +126,122 @@ dataSources:
         - Token
       abis:
         - name: stCELO
-          file: stCELO\abis\Moo.json
+          file: stCELO/abis/Moo.json
         - name: ERC20
-          file: stCELO\abis\ERC20.json
+          file: stCELO/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: stCELO\abis\ERC20SymbolBytes.json
+          file: stCELO/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: stCELO\abis\ERC20NameBytes.json
+          file: stCELO/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
-      file: celotoken\celotoken.wasm
+      file: celotoken/celotoken.wasm
+  - kind: ethereum/contract
+    name: NCT
+    network: celo
+    source:
+      address: "0x02De4766C272abc10Bc88c220D214A26960a7e92"
+      abi: NCT
+      startBlock: 14265450
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Token
+      abis:
+        - name: NCT
+          file: NCT/abis/nct.json
+        - name: ERC20
+          file: NCT/abis/ERC20.json
+        - name: ERC20SymbolBytes
+          file: NCT/abis/ERC20SymbolBytes.json
+        - name: ERC20NameBytes
+          file: NCT/abis/ERC20NameBytes.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: celotoken/celotoken.wasm
+  - kind: ethereum/contract
+    name: USDC
+    network: celo
+    source:
+      address: "0x37f750B7cC259A2f741AF45294f6a16572CF5cAd"
+      abi: USDC
+      startBlock: 13587390
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Token
+      abis:
+        - name: USDC
+          file: USDC/abis/ERC20.json
+        - name: ERC20
+          file: USDC/abis/ERC20.json
+        - name: ERC20SymbolBytes
+          file: USDC/abis/ERC20SymbolBytes.json
+        - name: ERC20NameBytes
+          file: USDC/abis/ERC20NameBytes.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: celotoken/celotoken.wasm
+  - kind: ethereum/contract
+    name: WETH
+    network: celo
+    source:
+      address: "0x66803FB87aBd4aaC3cbB3fAd7C3aa01f6F3FB207"
+      abi: WETH
+      startBlock: 13533270
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Token
+      abis:
+        - name: WETH
+          file: WETH/abis/ERC20.json
+        - name: ERC20
+          file: WETH/abis/ERC20.json
+        - name: ERC20SymbolBytes
+          file: WETH/abis/ERC20SymbolBytes.json
+        - name: ERC20NameBytes
+          file: WETH/abis/ERC20NameBytes.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: celotoken/celotoken.wasm
+  - kind: ethereum/contract
+    name: cMCO2
+    network: celo
+    source:
+      address: "0x32A9FE697a32135BFd313a6Ac28792DaE4D9979d"
+      abi: cMCO2
+      startBlock: 5916560
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Token
+      abis:
+        - name: cMCO2
+          file: cMCO2/abis/cmco2.json
+        - name: ERC20
+          file: cMCO2/abis/ERC20.json
+        - name: ERC20SymbolBytes
+          file: cMCO2/abis/ERC20SymbolBytes.json
+        - name: ERC20NameBytes
+          file: cMCO2/abis/ERC20NameBytes.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: celotoken/celotoken.wasm
