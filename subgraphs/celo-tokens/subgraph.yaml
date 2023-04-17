@@ -140,7 +140,7 @@ dataSources:
     name: stCELO
     network: celo
     source:
-      address: "0xa97be82bee72a809fe4b3ad158535879028babcb"
+      address: "0xC668583dcbDc9ae6FA3CE46462758188adfdfC24"
       abi: stCELO
       startBlock: 7700002
     mapping:
@@ -261,6 +261,60 @@ dataSources:
       abis:
         - name: cMCO2
           file: ./abis/cmco2.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+        - name: ERC20SymbolBytes
+          file: ./abis/ERC20SymbolBytes.json
+        - name: ERC20NameBytes
+          file: ./abis/ERC20NameBytes.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/mappings/core.ts
+  - kind: ethereum/contract
+    name: USDT
+    network: celo
+    source:
+      address: "0x617f3112bf5397D0467D315cC709EF968D9ba546"
+      abi: USDT
+      startBlock: 14890100
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Token
+      abis:
+        - name: USDT
+          file: ./abis/ERC20.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+        - name: ERC20SymbolBytes
+          file: ./abis/ERC20SymbolBytes.json
+        - name: ERC20NameBytes
+          file: ./abis/ERC20NameBytes.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/mappings/core.ts
+  - kind: ethereum/contract
+    name: UBE
+    network: celo
+    source:
+      address: "0x00Be915B9dCf56a3CBE739D9B9c202ca692409EC"
+      abi: UBE
+      startBlock: 16753450
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Token
+      abis:
+        - name: UBE
+          file: ./abis/ERC20.json
         - name: ERC20
           file: ./abis/ERC20.json
         - name: ERC20SymbolBytes
