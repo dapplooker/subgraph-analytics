@@ -28,7 +28,7 @@ dataSources:
         - WithdrawError
       abis:
         - name: abi
-          file: abi\abis\abi.json
+          file: abi/abis/abi.json
       eventHandlers:
         - event: AssetAdded(indexed uint256,indexed address,uint256)
           handler: handleAssetAddedEvent
@@ -56,4 +56,4 @@ dataSources:
           handler: handleVerifierUpdatedEvent
         - event: WithdrawError(bytes)
           handler: handleWithdrawErrorEvent
-      file: abi\abi.wasm
+      file: abi/abi.wasm
