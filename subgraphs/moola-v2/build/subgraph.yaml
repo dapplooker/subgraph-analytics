@@ -31,7 +31,7 @@ dataSources:
         - withdrawCall
       abis:
         - name: LendingPool
-          file: LendingPool\abis\LendingPool.json
+          file: LendingPool/abis/LendingPool.json
       eventHandlers:
         - event: Borrow(indexed address,address,indexed address,uint256,uint256,uint256,indexed
             uint16)
@@ -52,7 +52,7 @@ dataSources:
           handler: handleReserveUsedAsCollateralDisabled
         - event: ReserveDataUpdated(indexed address,uint256,uint256,uint256,uint256,uint256)
           handler: handleReserveDataUpdated
-      file: LendingPool\LendingPool.wasm
+      file: LendingPool/LendingPool.wasm
   - kind: ethereum/contract
     name: DebtToken1
     network: celo
@@ -71,11 +71,11 @@ dataSources:
         - increaseAllowanceCall
       abis:
         - name: DebtToken
-          file: DebtToken1\abis\DebtToken.json
+          file: DebtToken1/abis/DebtToken.json
       eventHandlers:
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleBorrowAllowanceDelegatedEvent
-      file: DebtToken1\DebtToken1.wasm
+      file: DebtToken1/DebtToken1.wasm
   - kind: ethereum/contract
     name: DebtToken2
     network: celo
@@ -94,11 +94,11 @@ dataSources:
         - increaseAllowanceCall
       abis:
         - name: DebtToken
-          file: DebtToken2\abis\DebtToken.json
+          file: DebtToken2/abis/DebtToken.json
       eventHandlers:
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleBorrowAllowanceDelegatedEvent
-      file: DebtToken1\DebtToken1.wasm
+      file: DebtToken1/DebtToken1.wasm
   - kind: ethereum/contract
     name: DebtToken3
     network: celo
@@ -117,11 +117,11 @@ dataSources:
         - increaseAllowanceCall
       abis:
         - name: DebtToken
-          file: DebtToken3\abis\DebtToken.json
+          file: DebtToken3/abis/DebtToken.json
       eventHandlers:
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleBorrowAllowanceDelegatedEvent
-      file: DebtToken1\DebtToken1.wasm
+      file: DebtToken1/DebtToken1.wasm
   - kind: ethereum/contract
     name: DebtToken4
     network: celo
@@ -140,11 +140,11 @@ dataSources:
         - increaseAllowanceCall
       abis:
         - name: DebtToken
-          file: DebtToken4\abis\DebtToken.json
+          file: DebtToken4/abis/DebtToken.json
       eventHandlers:
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleBorrowAllowanceDelegatedEvent
-      file: DebtToken1\DebtToken1.wasm
+      file: DebtToken1/DebtToken1.wasm
   - kind: ethereum/contract
     name: DebtToken5
     network: celo
@@ -163,11 +163,11 @@ dataSources:
         - increaseAllowanceCall
       abis:
         - name: DebtToken
-          file: DebtToken5\abis\DebtToken.json
+          file: DebtToken5/abis/DebtToken.json
       eventHandlers:
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleBorrowAllowanceDelegatedEvent
-      file: DebtToken1\DebtToken1.wasm
+      file: DebtToken1/DebtToken1.wasm
   - kind: ethereum/contract
     name: DebtToken6
     network: celo
@@ -186,11 +186,11 @@ dataSources:
         - increaseAllowanceCall
       abis:
         - name: DebtToken
-          file: DebtToken6\abis\DebtToken.json
+          file: DebtToken6/abis/DebtToken.json
       eventHandlers:
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleBorrowAllowanceDelegatedEvent
-      file: DebtToken1\DebtToken1.wasm
+      file: DebtToken1/DebtToken1.wasm
   - kind: ethereum/contract
     name: DebtToken7
     network: celo
@@ -209,11 +209,11 @@ dataSources:
         - increaseAllowanceCall
       abis:
         - name: DebtToken
-          file: DebtToken7\abis\DebtToken.json
+          file: DebtToken7/abis/DebtToken.json
       eventHandlers:
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleBorrowAllowanceDelegatedEvent
-      file: DebtToken1\DebtToken1.wasm
+      file: DebtToken1/DebtToken1.wasm
   - kind: ethereum/contract
     name: DebtToken8
     network: celo
@@ -232,11 +232,11 @@ dataSources:
         - increaseAllowanceCall
       abis:
         - name: DebtToken
-          file: DebtToken8\abis\DebtToken.json
+          file: DebtToken8/abis/DebtToken.json
       eventHandlers:
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleBorrowAllowanceDelegatedEvent
-      file: DebtToken1\DebtToken1.wasm
+      file: DebtToken1/DebtToken1.wasm
   - kind: ethereum/contract
     name: DebtToken9
     network: celo
@@ -255,11 +255,11 @@ dataSources:
         - increaseAllowanceCall
       abis:
         - name: DebtToken
-          file: DebtToken9\abis\DebtToken.json
+          file: DebtToken9/abis/DebtToken.json
       eventHandlers:
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleBorrowAllowanceDelegatedEvent
-      file: DebtToken1\DebtToken1.wasm
+      file: DebtToken1/DebtToken1.wasm
   - kind: ethereum/contract
     name: DebtToken10
     network: celo
@@ -278,11 +278,11 @@ dataSources:
         - increaseAllowanceCall
       abis:
         - name: DebtToken
-          file: DebtToken10\abis\DebtToken.json
+          file: DebtToken10/abis/DebtToken.json
       eventHandlers:
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleBorrowAllowanceDelegatedEvent
-      file: DebtToken1\DebtToken1.wasm
+      file: DebtToken1/DebtToken1.wasm
   - kind: ethereum/contract
     name: LendingPoolConfigurator
     network: celo
@@ -298,17 +298,17 @@ dataSources:
         - Reserve
       abis:
         - name: LendingPoolConfigurator
-          file: LendingPoolConfigurator\abis\LendingPoolConfigurator.json
+          file: LendingPoolConfigurator/abis/LendingPoolConfigurator.json
         - name: IERC20DetailedBytes
-          file: LendingPoolConfigurator\abis\IERC20DetailedBytes.json
+          file: LendingPoolConfigurator/abis/IERC20DetailedBytes.json
         - name: IERC20Detailed
-          file: LendingPoolConfigurator\abis\IERC20Detailed.json
+          file: LendingPoolConfigurator/abis/IERC20Detailed.json
       eventHandlers:
         - event: ReserveInitialized(indexed address,indexed address,address,address,address)
           handler: handleReserveInitialized
         - event: CollateralConfigurationChanged(indexed address,uint256,uint256,uint256)
           handler: handleCollateralConfigurationChanged
-      file: LendingPoolConfigurator\LendingPoolConfigurator.wasm
+      file: LendingPoolConfigurator/LendingPoolConfigurator.wasm
   - kind: ethereum/contract
     name: AToken
     network: celo
@@ -325,7 +325,7 @@ dataSources:
         - UserReserve
       abis:
         - name: AToken
-          file: AToken\abis\AToken.json
+          file: AToken/abis/AToken.json
       eventHandlers:
         - event: Burn(indexed address,indexed address,uint256,uint256)
           handler: handleATokenBurn
@@ -333,7 +333,7 @@ dataSources:
           handler: handleATokenTransfer
         - event: Mint(indexed address,uint256,uint256)
           handler: handleATokenMint
-      file: AToken\AToken.wasm
+      file: AToken/AToken.wasm
   - kind: ethereum/contract
     name: StableDebtToken1
     network: celo
@@ -348,7 +348,7 @@ dataSources:
         - UserReserve
       abis:
         - name: StableDebtToken
-          file: StableDebtToken1\abis\StableDebtToken.json
+          file: StableDebtToken1/abis/StableDebtToken.json
       eventHandlers:
         - event: Burn(indexed address,uint256,uint256,uint256,uint256,uint256)
           handler: handleStableTokenBurn
@@ -357,7 +357,7 @@ dataSources:
           handler: handleStableTokenMint
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleStableTokenBorrowAllowanceDelegated
-      file: StableDebtToken1\StableDebtToken1.wasm
+      file: StableDebtToken1/StableDebtToken1.wasm
   - kind: ethereum/contract
     name: StableDebtToken2
     network: celo
@@ -372,7 +372,7 @@ dataSources:
         - UserReserve
       abis:
         - name: StableDebtToken
-          file: StableDebtToken2\abis\StableDebtToken.json
+          file: StableDebtToken2/abis/StableDebtToken.json
       eventHandlers:
         - event: Burn(indexed address,uint256,uint256,uint256,uint256,uint256)
           handler: handleStableTokenBurn
@@ -381,7 +381,7 @@ dataSources:
           handler: handleStableTokenMint
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleStableTokenBorrowAllowanceDelegated
-      file: StableDebtToken1\StableDebtToken1.wasm
+      file: StableDebtToken1/StableDebtToken1.wasm
   - kind: ethereum/contract
     name: StableDebtToken3
     network: celo
@@ -396,7 +396,7 @@ dataSources:
         - UserReserve
       abis:
         - name: StableDebtToken
-          file: StableDebtToken3\abis\StableDebtToken.json
+          file: StableDebtToken3/abis/StableDebtToken.json
       eventHandlers:
         - event: Burn(indexed address,uint256,uint256,uint256,uint256,uint256)
           handler: handleStableTokenBurn
@@ -405,7 +405,7 @@ dataSources:
           handler: handleStableTokenMint
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleStableTokenBorrowAllowanceDelegated
-      file: StableDebtToken1\StableDebtToken1.wasm
+      file: StableDebtToken1/StableDebtToken1.wasm
   - kind: ethereum/contract
     name: StableDebtToken4
     network: celo
@@ -420,7 +420,7 @@ dataSources:
         - UserReserve
       abis:
         - name: StableDebtToken
-          file: StableDebtToken4\abis\StableDebtToken.json
+          file: StableDebtToken4/abis/StableDebtToken.json
       eventHandlers:
         - event: Burn(indexed address,uint256,uint256,uint256,uint256,uint256)
           handler: handleStableTokenBurn
@@ -429,7 +429,7 @@ dataSources:
           handler: handleStableTokenMint
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleStableTokenBorrowAllowanceDelegated
-      file: StableDebtToken1\StableDebtToken1.wasm
+      file: StableDebtToken1/StableDebtToken1.wasm
   - kind: ethereum/contract
     name: StableDebtToken5
     network: celo
@@ -444,7 +444,7 @@ dataSources:
         - UserReserve
       abis:
         - name: StableDebtToken
-          file: StableDebtToken5\abis\StableDebtToken.json
+          file: StableDebtToken5/abis/StableDebtToken.json
       eventHandlers:
         - event: Burn(indexed address,uint256,uint256,uint256,uint256,uint256)
           handler: handleStableTokenBurn
@@ -453,7 +453,7 @@ dataSources:
           handler: handleStableTokenMint
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleStableTokenBorrowAllowanceDelegated
-      file: StableDebtToken1\StableDebtToken1.wasm
+      file: StableDebtToken1/StableDebtToken1.wasm
   - kind: ethereum/contract
     name: VariableDebtToken1
     network: celo
@@ -468,7 +468,7 @@ dataSources:
         - UserReserve
       abis:
         - name: VariableDebtToken
-          file: VariableDebtToken1\abis\VariableDebtToken.json
+          file: VariableDebtToken1/abis/VariableDebtToken.json
       eventHandlers:
         - event: Burn(indexed address,uint256,uint256)
           handler: handleVariableTokenBurn
@@ -476,7 +476,7 @@ dataSources:
           handler: handleVariableTokenMint
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleVariableTokenBorrowAllowanceDelegated
-      file: StableDebtToken1\StableDebtToken1.wasm
+      file: StableDebtToken1/StableDebtToken1.wasm
   - kind: ethereum/contract
     name: VariableDebtToken2
     network: celo
@@ -491,7 +491,7 @@ dataSources:
         - UserReserve
       abis:
         - name: VariableDebtToken
-          file: VariableDebtToken2\abis\VariableDebtToken.json
+          file: VariableDebtToken2/abis/VariableDebtToken.json
       eventHandlers:
         - event: Burn(indexed address,uint256,uint256)
           handler: handleVariableTokenBurn
@@ -499,7 +499,7 @@ dataSources:
           handler: handleVariableTokenMint
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleVariableTokenBorrowAllowanceDelegated
-      file: StableDebtToken1\StableDebtToken1.wasm
+      file: StableDebtToken1/StableDebtToken1.wasm
   - kind: ethereum/contract
     name: VariableDebtToken3
     network: celo
@@ -514,7 +514,7 @@ dataSources:
         - UserReserve
       abis:
         - name: VariableDebtToken
-          file: VariableDebtToken3\abis\VariableDebtToken.json
+          file: VariableDebtToken3/abis/VariableDebtToken.json
       eventHandlers:
         - event: Burn(indexed address,uint256,uint256)
           handler: handleVariableTokenBurn
@@ -522,7 +522,7 @@ dataSources:
           handler: handleVariableTokenMint
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleVariableTokenBorrowAllowanceDelegated
-      file: StableDebtToken1\StableDebtToken1.wasm
+      file: StableDebtToken1/StableDebtToken1.wasm
   - kind: ethereum/contract
     name: VariableDebtToken4
     network: celo
@@ -537,7 +537,7 @@ dataSources:
         - UserReserve
       abis:
         - name: VariableDebtToken
-          file: VariableDebtToken4\abis\VariableDebtToken.json
+          file: VariableDebtToken4/abis/VariableDebtToken.json
       eventHandlers:
         - event: Burn(indexed address,uint256,uint256)
           handler: handleVariableTokenBurn
@@ -545,7 +545,7 @@ dataSources:
           handler: handleVariableTokenMint
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleVariableTokenBorrowAllowanceDelegated
-      file: StableDebtToken1\StableDebtToken1.wasm
+      file: StableDebtToken1/StableDebtToken1.wasm
   - kind: ethereum/contract
     name: VariableDebtToken5
     network: celo
@@ -560,7 +560,7 @@ dataSources:
         - UserReserve
       abis:
         - name: VariableDebtToken
-          file: VariableDebtToken5\abis\VariableDebtToken.json
+          file: VariableDebtToken5/abis/VariableDebtToken.json
       eventHandlers:
         - event: Burn(indexed address,uint256,uint256)
           handler: handleVariableTokenBurn
@@ -568,7 +568,7 @@ dataSources:
           handler: handleVariableTokenMint
         - event: BorrowAllowanceDelegated(indexed address,indexed address,address,uint256)
           handler: handleVariableTokenBorrowAllowanceDelegated
-      file: StableDebtToken1\StableDebtToken1.wasm
+      file: StableDebtToken1/StableDebtToken1.wasm
   - kind: ethereum/contract
     name: AToken1
     network: celo
@@ -585,7 +585,7 @@ dataSources:
         - UserReserve
       abis:
         - name: AToken
-          file: AToken1\abis\AToken.json
+          file: AToken1/abis/AToken.json
       eventHandlers:
         - event: Burn(indexed address,indexed address,uint256,uint256)
           handler: handleATokenBurn
@@ -593,7 +593,7 @@ dataSources:
           handler: handleATokenTransfer
         - event: Mint(indexed address,uint256,uint256)
           handler: handleATokenMint
-      file: StableDebtToken1\StableDebtToken1.wasm
+      file: StableDebtToken1/StableDebtToken1.wasm
   - kind: ethereum/contract
     name: AToken2
     network: celo
@@ -610,7 +610,7 @@ dataSources:
         - UserReserve
       abis:
         - name: AToken
-          file: AToken2\abis\AToken.json
+          file: AToken2/abis/AToken.json
       eventHandlers:
         - event: Burn(indexed address,indexed address,uint256,uint256)
           handler: handleATokenBurn
@@ -618,7 +618,7 @@ dataSources:
           handler: handleATokenTransfer
         - event: Mint(indexed address,uint256,uint256)
           handler: handleATokenMint
-      file: StableDebtToken1\StableDebtToken1.wasm
+      file: StableDebtToken1/StableDebtToken1.wasm
   - kind: ethereum/contract
     name: AToken3
     network: celo
@@ -635,7 +635,7 @@ dataSources:
         - UserReserve
       abis:
         - name: AToken
-          file: AToken3\abis\AToken.json
+          file: AToken3/abis/AToken.json
       eventHandlers:
         - event: Burn(indexed address,indexed address,uint256,uint256)
           handler: handleATokenBurn
@@ -643,7 +643,7 @@ dataSources:
           handler: handleATokenTransfer
         - event: Mint(indexed address,uint256,uint256)
           handler: handleATokenMint
-      file: StableDebtToken1\StableDebtToken1.wasm
+      file: StableDebtToken1/StableDebtToken1.wasm
   - kind: ethereum/contract
     name: AToken4
     network: celo
@@ -660,7 +660,7 @@ dataSources:
         - UserReserve
       abis:
         - name: AToken
-          file: AToken4\abis\AToken.json
+          file: AToken4/abis/AToken.json
       eventHandlers:
         - event: Burn(indexed address,indexed address,uint256,uint256)
           handler: handleATokenBurn
@@ -668,7 +668,7 @@ dataSources:
           handler: handleATokenTransfer
         - event: Mint(indexed address,uint256,uint256)
           handler: handleATokenMint
-      file: StableDebtToken1\StableDebtToken1.wasm
+      file: StableDebtToken1/StableDebtToken1.wasm
   - kind: ethereum/contract
     name: AToken5
     network: celo
@@ -685,7 +685,7 @@ dataSources:
         - UserReserve
       abis:
         - name: AToken
-          file: AToken5\abis\AToken.json
+          file: AToken5/abis/AToken.json
       eventHandlers:
         - event: Burn(indexed address,indexed address,uint256,uint256)
           handler: handleATokenBurn
@@ -693,4 +693,4 @@ dataSources:
           handler: handleATokenTransfer
         - event: Mint(indexed address,uint256,uint256)
           handler: handleATokenMint
-      file: StableDebtToken1\StableDebtToken1.wasm
+      file: StableDebtToken1/StableDebtToken1.wasm

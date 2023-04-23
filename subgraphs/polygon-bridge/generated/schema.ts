@@ -37,7 +37,11 @@ export class LockedERC20Event extends Entity {
 
   get id(): string {
     let value = this.get("id");
-    return value!.toString();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toString();
+    }
   }
 
   set id(value: string) {
@@ -148,7 +152,11 @@ export class LockedERC20Event extends Entity {
 
   get blockTimestamp(): BigInt {
     let value = this.get("blockTimestamp");
-    return value!.toBigInt();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigInt();
+    }
   }
 
   set blockTimestamp(value: BigInt) {
@@ -157,7 +165,11 @@ export class LockedERC20Event extends Entity {
 
   get depositor(): Bytes {
     let value = this.get("depositor");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set depositor(value: Bytes) {
@@ -166,7 +178,11 @@ export class LockedERC20Event extends Entity {
 
   get depositReceiver(): Bytes {
     let value = this.get("depositReceiver");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set depositReceiver(value: Bytes) {
@@ -175,7 +191,11 @@ export class LockedERC20Event extends Entity {
 
   get rootToken(): Bytes {
     let value = this.get("rootToken");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set rootToken(value: Bytes) {
@@ -184,7 +204,11 @@ export class LockedERC20Event extends Entity {
 
   get amount(): BigInt {
     let value = this.get("amount");
-    return value!.toBigInt();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigInt();
+    }
   }
 
   set amount(value: BigInt) {
@@ -216,7 +240,11 @@ export class ExitTokensCall extends Entity {
 
   get id(): string {
     let value = this.get("id");
-    return value!.toString();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toString();
+    }
   }
 
   set id(value: string) {
@@ -242,7 +270,11 @@ export class ExitTokensCall extends Entity {
 
   get fromAddress(): Bytes {
     let value = this.get("fromAddress");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set fromAddress(value: Bytes) {
@@ -319,7 +351,11 @@ export class ExitTokensCall extends Entity {
 
   get blockTimestamp(): BigInt {
     let value = this.get("blockTimestamp");
-    return value!.toBigInt();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigInt();
+    }
   }
 
   set blockTimestamp(value: BigInt) {
@@ -328,7 +364,11 @@ export class ExitTokensCall extends Entity {
 
   get value0(): Bytes {
     let value = this.get("value0");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set value0(value: Bytes) {
@@ -337,7 +377,11 @@ export class ExitTokensCall extends Entity {
 
   get rootToken(): Bytes {
     let value = this.get("rootToken");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set rootToken(value: Bytes) {
@@ -346,7 +390,11 @@ export class ExitTokensCall extends Entity {
 
   get log(): Bytes {
     let value = this.get("log");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set log(value: Bytes) {
@@ -378,7 +426,11 @@ export class LockTokensCall extends Entity {
 
   get id(): string {
     let value = this.get("id");
-    return value!.toString();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toString();
+    }
   }
 
   set id(value: string) {
@@ -404,7 +456,11 @@ export class LockTokensCall extends Entity {
 
   get fromAddress(): Bytes {
     let value = this.get("fromAddress");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set fromAddress(value: Bytes) {
@@ -481,7 +537,11 @@ export class LockTokensCall extends Entity {
 
   get blockTimestamp(): BigInt {
     let value = this.get("blockTimestamp");
-    return value!.toBigInt();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigInt();
+    }
   }
 
   set blockTimestamp(value: BigInt) {
@@ -490,7 +550,11 @@ export class LockTokensCall extends Entity {
 
   get depositor(): Bytes {
     let value = this.get("depositor");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set depositor(value: Bytes) {
@@ -499,7 +563,11 @@ export class LockTokensCall extends Entity {
 
   get depositReceiver(): Bytes {
     let value = this.get("depositReceiver");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set depositReceiver(value: Bytes) {
@@ -508,7 +576,11 @@ export class LockTokensCall extends Entity {
 
   get rootToken(): Bytes {
     let value = this.get("rootToken");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set rootToken(value: Bytes) {
@@ -517,7 +589,11 @@ export class LockTokensCall extends Entity {
 
   get depositData(): Bytes {
     let value = this.get("depositData");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set depositData(value: Bytes) {

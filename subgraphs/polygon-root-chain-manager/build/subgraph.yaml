@@ -1,4 +1,4 @@
-specVersion: 0.0.4
+specVersion: 0.0.5
 schema:
   file: schema.graphql
 dataSources:
@@ -39,7 +39,7 @@ dataSources:
         - setupContractIdCall
       abis:
         - name: RCM
-          file: RCM\abis\RCM.json
+          file: RCM/abis/RCM.json
       eventHandlers:
         - event: MetaTransactionExecuted(address,address,bytes)
           handler: handleMetaTransactionExecutedEvent
@@ -59,4 +59,4 @@ dataSources:
         - event: TokenMapped(indexed address,indexed address,indexed bytes32)
           handler: handleTokenMappedEvent
           receipt: true
-      file: RCM\RCM.wasm
+      file: RCM/RCM.wasm
