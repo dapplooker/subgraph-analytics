@@ -40,7 +40,11 @@ export class MetaTransactionExecutedEvent extends Entity {
 
   get id(): string {
     let value = this.get("id");
-    return value!.toString();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toString();
+    }
   }
 
   set id(value: string) {
@@ -151,7 +155,11 @@ export class MetaTransactionExecutedEvent extends Entity {
 
   get blockTimestamp(): BigInt {
     let value = this.get("blockTimestamp");
-    return value!.toBigInt();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigInt();
+    }
   }
 
   set blockTimestamp(value: BigInt) {
@@ -160,7 +168,11 @@ export class MetaTransactionExecutedEvent extends Entity {
 
   get userAddress(): Bytes {
     let value = this.get("userAddress");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set userAddress(value: Bytes) {
@@ -169,7 +181,11 @@ export class MetaTransactionExecutedEvent extends Entity {
 
   get relayerAddress(): Bytes {
     let value = this.get("relayerAddress");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set relayerAddress(value: Bytes) {
@@ -178,7 +194,11 @@ export class MetaTransactionExecutedEvent extends Entity {
 
   get functionSignature(): Bytes {
     let value = this.get("functionSignature");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set functionSignature(value: Bytes) {
@@ -215,7 +235,11 @@ export class PredicateRegisteredEvent extends Entity {
 
   get id(): string {
     let value = this.get("id");
-    return value!.toString();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toString();
+    }
   }
 
   set id(value: string) {
@@ -326,7 +350,11 @@ export class PredicateRegisteredEvent extends Entity {
 
   get blockTimestamp(): BigInt {
     let value = this.get("blockTimestamp");
-    return value!.toBigInt();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigInt();
+    }
   }
 
   set blockTimestamp(value: BigInt) {
@@ -335,7 +363,11 @@ export class PredicateRegisteredEvent extends Entity {
 
   get tokenType(): Bytes {
     let value = this.get("tokenType");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set tokenType(value: Bytes) {
@@ -344,7 +376,11 @@ export class PredicateRegisteredEvent extends Entity {
 
   get predicateAddress(): Bytes {
     let value = this.get("predicateAddress");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set predicateAddress(value: Bytes) {
@@ -381,7 +417,11 @@ export class RoleAdminChangedEvent extends Entity {
 
   get id(): string {
     let value = this.get("id");
-    return value!.toString();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toString();
+    }
   }
 
   set id(value: string) {
@@ -492,7 +532,11 @@ export class RoleAdminChangedEvent extends Entity {
 
   get blockTimestamp(): BigInt {
     let value = this.get("blockTimestamp");
-    return value!.toBigInt();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigInt();
+    }
   }
 
   set blockTimestamp(value: BigInt) {
@@ -501,7 +545,11 @@ export class RoleAdminChangedEvent extends Entity {
 
   get role(): Bytes {
     let value = this.get("role");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set role(value: Bytes) {
@@ -510,7 +558,11 @@ export class RoleAdminChangedEvent extends Entity {
 
   get previousAdminRole(): Bytes {
     let value = this.get("previousAdminRole");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set previousAdminRole(value: Bytes) {
@@ -519,7 +571,11 @@ export class RoleAdminChangedEvent extends Entity {
 
   get newAdminRole(): Bytes {
     let value = this.get("newAdminRole");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set newAdminRole(value: Bytes) {
@@ -553,7 +609,11 @@ export class RoleGrantedEvent extends Entity {
 
   get id(): string {
     let value = this.get("id");
-    return value!.toString();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toString();
+    }
   }
 
   set id(value: string) {
@@ -664,7 +724,11 @@ export class RoleGrantedEvent extends Entity {
 
   get blockTimestamp(): BigInt {
     let value = this.get("blockTimestamp");
-    return value!.toBigInt();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigInt();
+    }
   }
 
   set blockTimestamp(value: BigInt) {
@@ -673,7 +737,11 @@ export class RoleGrantedEvent extends Entity {
 
   get role(): Bytes {
     let value = this.get("role");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set role(value: Bytes) {
@@ -682,7 +750,11 @@ export class RoleGrantedEvent extends Entity {
 
   get account(): Bytes {
     let value = this.get("account");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set account(value: Bytes) {
@@ -691,7 +763,11 @@ export class RoleGrantedEvent extends Entity {
 
   get sender(): Bytes {
     let value = this.get("sender");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set sender(value: Bytes) {
@@ -725,7 +801,11 @@ export class RoleRevokedEvent extends Entity {
 
   get id(): string {
     let value = this.get("id");
-    return value!.toString();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toString();
+    }
   }
 
   set id(value: string) {
@@ -836,7 +916,11 @@ export class RoleRevokedEvent extends Entity {
 
   get blockTimestamp(): BigInt {
     let value = this.get("blockTimestamp");
-    return value!.toBigInt();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigInt();
+    }
   }
 
   set blockTimestamp(value: BigInt) {
@@ -845,7 +929,11 @@ export class RoleRevokedEvent extends Entity {
 
   get role(): Bytes {
     let value = this.get("role");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set role(value: Bytes) {
@@ -854,7 +942,11 @@ export class RoleRevokedEvent extends Entity {
 
   get account(): Bytes {
     let value = this.get("account");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set account(value: Bytes) {
@@ -863,7 +955,11 @@ export class RoleRevokedEvent extends Entity {
 
   get sender(): Bytes {
     let value = this.get("sender");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set sender(value: Bytes) {
@@ -897,7 +993,11 @@ export class TokenMappedEvent extends Entity {
 
   get id(): string {
     let value = this.get("id");
-    return value!.toString();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toString();
+    }
   }
 
   set id(value: string) {
@@ -1008,7 +1108,11 @@ export class TokenMappedEvent extends Entity {
 
   get blockTimestamp(): BigInt {
     let value = this.get("blockTimestamp");
-    return value!.toBigInt();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigInt();
+    }
   }
 
   set blockTimestamp(value: BigInt) {
@@ -1017,7 +1121,11 @@ export class TokenMappedEvent extends Entity {
 
   get rootToken(): Bytes {
     let value = this.get("rootToken");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set rootToken(value: Bytes) {
@@ -1026,7 +1134,11 @@ export class TokenMappedEvent extends Entity {
 
   get childToken(): Bytes {
     let value = this.get("childToken");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set childToken(value: Bytes) {
@@ -1035,7 +1147,11 @@ export class TokenMappedEvent extends Entity {
 
   get tokenType(): Bytes {
     let value = this.get("tokenType");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set tokenType(value: Bytes) {

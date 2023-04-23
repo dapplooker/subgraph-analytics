@@ -19,7 +19,7 @@ dataSources:
         - LockTokensCall
       abis:
         - name: ERC20
-          file: ERC20\abis\ERC20.json
+          file: ERC20/abis/ERC20.json
       callHandlers:
         - function: exitTokens(address,address,bytes)
           handler: handleexitTokensCall
@@ -28,4 +28,4 @@ dataSources:
       eventHandlers:
         - event: LockedERC20(indexed address,indexed address,indexed address,uint256)
           handler: handleLockedERC20Event
-      file: ERC20\ERC20.wasm
+      file: ERC20/ERC20.wasm

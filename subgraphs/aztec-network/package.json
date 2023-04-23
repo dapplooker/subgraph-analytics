@@ -1,5 +1,5 @@
 {
-  "name": "asset-subgraph",
+  "name": "aztec-subgraph",
   "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen",
@@ -10,8 +10,8 @@
     "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 dapplooker/aztec-connect"
   },
   "dependencies": {
-    "@graphprotocol/graph-cli": "0.33.1",
-    "@graphprotocol/graph-ts": "0.27.0"
+    "@graphprotocol/graph-cli": "0.47.1",
+    "@graphprotocol/graph-ts": "0.29.3"
   },
   "version": "1.0.0",
   "main": "index.js",
