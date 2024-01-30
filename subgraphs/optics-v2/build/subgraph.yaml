@@ -17,15 +17,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: cUSD\abis\ERC20.json
+          file: cUSD/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: cUSD\abis\ERC20SymbolBytes.json
+          file: cUSD/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: cUSD\abis\ERC20NameBytes.json
+          file: cUSD/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: cREAL
     network: celo
@@ -41,15 +41,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: cREAL\abis\ERC20.json
+          file: cREAL/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: cREAL\abis\ERC20SymbolBytes.json
+          file: cREAL/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: cREAL\abis\ERC20NameBytes.json
+          file: cREAL/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: cEUR
     network: celo
@@ -65,15 +65,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: cEUR\abis\ERC20.json
+          file: cEUR/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: cEUR\abis\ERC20SymbolBytes.json
+          file: cEUR/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: cEUR\abis\ERC20NameBytes.json
+          file: cEUR/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: CELO
     network: celo
@@ -89,15 +89,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: CELO\abis\ERC20.json
+          file: CELO/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: CELO\abis\ERC20SymbolBytes.json
+          file: CELO/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: CELO\abis\ERC20NameBytes.json
+          file: CELO/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: UBE
     network: celo
@@ -113,15 +113,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: UBE\abis\ERC20.json
+          file: UBE/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: UBE\abis\ERC20SymbolBytes.json
+          file: UBE/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: UBE\abis\ERC20NameBytes.json
+          file: UBE/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: PACT
     network: celo
@@ -137,15 +137,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: PACT\abis\ERC20.json
+          file: PACT/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: PACT\abis\ERC20SymbolBytes.json
+          file: PACT/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: PACT\abis\ERC20NameBytes.json
+          file: PACT/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: MOBI
     network: celo
@@ -161,15 +161,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: MOBI\abis\ERC20.json
+          file: MOBI/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: MOBI\abis\ERC20SymbolBytes.json
+          file: MOBI/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: MOBI\abis\ERC20NameBytes.json
+          file: MOBI/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: MOO
     network: celo
@@ -185,15 +185,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: MOO\abis\ERC20.json
+          file: MOO/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: MOO\abis\ERC20SymbolBytes.json
+          file: MOO/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: MOO\abis\ERC20NameBytes.json
+          file: MOO/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: WMATIC
     network: celo
@@ -209,15 +209,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: WMATIC\abis\ERC20.json
+          file: WMATIC/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: WMATIC\abis\ERC20SymbolBytes.json
+          file: WMATIC/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: WMATIC\abis\ERC20NameBytes.json
+          file: WMATIC/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: SUSHI
     network: celo
@@ -233,15 +233,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: SUSHI\abis\ERC20.json
+          file: SUSHI/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: SUSHI\abis\ERC20SymbolBytes.json
+          file: SUSHI/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: SUSHI\abis\ERC20NameBytes.json
+          file: SUSHI/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: WETH
     network: celo
@@ -257,15 +257,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: WETH\abis\ERC20.json
+          file: WETH/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: WETH\abis\ERC20SymbolBytes.json
+          file: WETH/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: WETH\abis\ERC20NameBytes.json
+          file: WETH/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: WBTC
     network: celo
@@ -281,15 +281,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: WBTC\abis\ERC20.json
+          file: WBTC/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: WBTC\abis\ERC20SymbolBytes.json
+          file: WBTC/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: WBTC\abis\ERC20NameBytes.json
+          file: WBTC/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: USDC
     network: celo
@@ -305,15 +305,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: USDC\abis\ERC20.json
+          file: USDC/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: USDC\abis\ERC20SymbolBytes.json
+          file: USDC/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: USDC\abis\ERC20NameBytes.json
+          file: USDC/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: USDC-POS
     network: celo
@@ -329,15 +329,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: USDC-POS\abis\ERC20.json
+          file: USDC-POS/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: USDC-POS\abis\ERC20SymbolBytes.json
+          file: USDC-POS/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: USDC-POS\abis\ERC20NameBytes.json
+          file: USDC-POS/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: USDT
     network: celo
@@ -353,15 +353,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: USDT\abis\ERC20.json
+          file: USDT/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: USDT\abis\ERC20SymbolBytes.json
+          file: USDT/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: USDT\abis\ERC20NameBytes.json
+          file: USDT/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: DAI
     network: celo
@@ -377,15 +377,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: DAI\abis\ERC20.json
+          file: DAI/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: DAI\abis\ERC20SymbolBytes.json
+          file: DAI/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: DAI\abis\ERC20NameBytes.json
+          file: DAI/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: Symmetric
     network: celo
@@ -401,15 +401,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: Symmetric\abis\ERC20.json
+          file: Symmetric/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: Symmetric\abis\ERC20SymbolBytes.json
+          file: Symmetric/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: Symmetric\abis\ERC20NameBytes.json
+          file: Symmetric/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: DAI1
     network: celo
@@ -425,15 +425,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: DAI1\abis\ERC20.json
+          file: DAI1/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: DAI1\abis\ERC20SymbolBytes.json
+          file: DAI1/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: DAI1\abis\ERC20NameBytes.json
+          file: DAI1/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: DAI2
     network: celo
@@ -449,15 +449,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: DAI2\abis\ERC20.json
+          file: DAI2/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: DAI2\abis\ERC20SymbolBytes.json
+          file: DAI2/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: DAI2\abis\ERC20NameBytes.json
+          file: DAI2/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: wBTC1
     network: celo
@@ -473,15 +473,15 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: wBTC1\abis\ERC20.json
+          file: wBTC1/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: wBTC1\abis\ERC20SymbolBytes.json
+          file: wBTC1/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: wBTC1\abis\ERC20NameBytes.json
+          file: wBTC1/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm
   - kind: ethereum
     name: wBTC2
     network: celo
@@ -497,12 +497,12 @@ dataSources:
         - Transfer
       abis:
         - name: ERC20
-          file: wBTC2\abis\ERC20.json
+          file: wBTC2/abis/ERC20.json
         - name: ERC20SymbolBytes
-          file: wBTC2\abis\ERC20SymbolBytes.json
+          file: wBTC2/abis/ERC20SymbolBytes.json
         - name: ERC20NameBytes
-          file: wBTC2\abis\ERC20NameBytes.json
+          file: wBTC2/abis/ERC20NameBytes.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransferEvent
-      file: cUSD\cUSD.wasm
+      file: cUSD/cUSD.wasm

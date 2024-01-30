@@ -1,0 +1,97 @@
+type SOP_OwnerSetEvent @entity {
+  id: ID!
+  txHash: Bytes
+  fromAddress: Bytes # address
+  toAddress: Bytes # address
+  valueTransferred: BigInt
+  gasLimit: BigInt
+  gasPrice: BigInt
+  blockTimestamp: BigInt! # uint256
+  owner: Bytes! # address
+}
+
+type SOP_ImplementationSetEvent @entity {
+  id: ID!
+  txHash: Bytes
+  fromAddress: Bytes # address
+  toAddress: Bytes # address
+  valueTransferred: BigInt
+  gasLimit: BigInt
+  gasPrice: BigInt
+  blockTimestamp: BigInt! # uint256
+  implementation: Bytes! # address
+}
+
+type C_ExchangeProviderAddedEvent @entity {
+  id: ID!
+  txHash: Bytes
+  fromAddress: Bytes # address
+  toAddress: Bytes # address
+  valueTransferred: BigInt
+  gasLimit: BigInt
+  gasPrice: BigInt
+  blockTimestamp: BigInt! # uint256
+  exchangeProvider: Bytes! # address
+}
+
+type C_ExchangeProviderRemovedEvent @entity {
+  id: ID!
+  txHash: Bytes
+  fromAddress: Bytes # address
+  toAddress: Bytes # address
+  valueTransferred: BigInt
+  gasLimit: BigInt
+  gasPrice: BigInt
+  blockTimestamp: BigInt! # uint256
+  exchangeProvider: Bytes! # address
+}
+
+type C_ReserveSetEvent @entity {
+  id: ID!
+  txHash: Bytes
+  fromAddress: Bytes # address
+  toAddress: Bytes # address
+  valueTransferred: BigInt
+  gasLimit: BigInt
+  gasPrice: BigInt
+  blockTimestamp: BigInt! # uint256
+  newAddress: Bytes! # address
+  prevAddress: Bytes! # address
+}
+
+type C_SwapEvent @entity {
+  id: ID!
+  txHash: Bytes
+  fromAddress: Bytes # address
+  toAddress: Bytes # address
+  valueTransferred: BigInt
+  gasLimit: BigInt
+  gasPrice: BigInt
+  blockTimestamp: BigInt! # uint256
+  exchangeProvider: Bytes! # address
+  exchangeId: Bytes! # bytes32
+  trader: Bytes! # address
+  tokenIn: Bytes! # address
+  tokenOut: Bytes! # address
+  amountIn: BigInt! # uint256
+  amountOut: BigInt! # uint256
+}
+
+type C_TradingLimitConfiguredEvent @entity {
+  id: ID!
+  txHash: Bytes
+  fromAddress: Bytes # address
+  toAddress: Bytes # address
+  valueTransferred: BigInt
+  gasLimit: BigInt
+  gasPrice: BigInt
+  blockTimestamp: BigInt! # uint256
+  exchangeId: Bytes! # bytes32
+  token: Bytes! # address
+  config_timestep0: BigInt! # uint32
+  config_timestep1: BigInt! # uint32
+  config_limit0: BigInt! # int48
+  config_limit1: BigInt! # int48
+  config_limitGlobal: BigInt! # int48
+  config_flags: Int! # uint8
+}

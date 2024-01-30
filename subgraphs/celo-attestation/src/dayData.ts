@@ -21,6 +21,7 @@ export function updateDayData(eventType: string, gasConsumed: BigDecimal, update
         attestationDayData.dayTimestamp = dayStartTimestamp;
         attestationDayData.attestationCompletedGasConsumed = ZERO_BD;
         attestationDayData.attestationRequestedGasConsumed = ZERO_BD;
+        attestationDayData.attestationIssuerSelectedGasConsumed = ZERO_BD;
         attestationDayData.attestationRequestedCount = ZERO_BD;
         attestationDayData.attestationCompletedCount = ZERO_BD;
         attestationDayData.attestationIssuerSelectedCount = ZERO_BD;

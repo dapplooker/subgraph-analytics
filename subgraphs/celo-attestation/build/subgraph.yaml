@@ -24,7 +24,7 @@ dataSources:
         - Withdrawal
       abis:
         - name: Attestation
-          file: Attestation\abis\Attestation.json
+          file: Attestation/abis/Attestation.json
       eventHandlers:
         - event: AttestationCompleted(indexed bytes32,indexed address,indexed address)
           handler: handleAttestationCompletedEvent
@@ -42,7 +42,7 @@ dataSources:
           handler: handleWithdrawalEvent
         - event: AttestationsTransferred(indexed bytes32,indexed address,indexed address)
           handler: handleAttestationsTransferredEvent
-      file: Attestation\Attestation.wasm
+      file: Attestation/Attestation.wasm
   - kind: ethereum
     name: Escrow
     network: celo
@@ -60,7 +60,7 @@ dataSources:
         - Withdrawal
       abis:
         - name: Escrow
-          file: Escrow\abis\Escrow.json
+          file: Escrow/abis/Escrow.json
       eventHandlers:
         - event: Revocation(indexed bytes32,indexed address,indexed address,uint256,address)
           handler: handleRevocationEvent
@@ -68,7 +68,7 @@ dataSources:
           handler: handleTransferEvent
         - event: Withdrawal(indexed bytes32,indexed address,indexed address,uint256,address)
           handler: handleWithdrawalEvent
-      file: Escrow\Escrow.wasm
+      file: Escrow/Escrow.wasm
   - kind: ethereum
     name: Accounts
     network: celo
@@ -84,8 +84,8 @@ dataSources:
         - AccountWalletAddressSet
       abis:
         - name: Accounts
-          file: Accounts\abis\Accounts.json
+          file: Accounts/abis/Accounts.json
       eventHandlers:
         - event: AccountWalletAddressSet(indexed address,address)
           handler: handleAccountWalletAddressSetEvent
-      file: Accounts\Accounts.wasm
+      file: Accounts/Accounts.wasm

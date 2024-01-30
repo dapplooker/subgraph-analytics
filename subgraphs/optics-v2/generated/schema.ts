@@ -35,7 +35,11 @@ export class Token extends Entity {
 
   get id(): string {
     let value = this.get("id");
-    return value!.toString();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toString();
+    }
   }
 
   set id(value: string) {
@@ -44,7 +48,11 @@ export class Token extends Entity {
 
   get symbol(): string {
     let value = this.get("symbol");
-    return value!.toString();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toString();
+    }
   }
 
   set symbol(value: string) {
@@ -53,7 +61,11 @@ export class Token extends Entity {
 
   get name(): string {
     let value = this.get("name");
-    return value!.toString();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toString();
+    }
   }
 
   set name(value: string) {
@@ -62,7 +74,11 @@ export class Token extends Entity {
 
   get lastUpdatedTimestamp(): BigInt {
     let value = this.get("lastUpdatedTimestamp");
-    return value!.toBigInt();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigInt();
+    }
   }
 
   set lastUpdatedTimestamp(value: BigInt) {
@@ -94,7 +110,11 @@ export class Transaction extends Entity {
 
   get id(): string {
     let value = this.get("id");
-    return value!.toString();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toString();
+    }
   }
 
   set id(value: string) {
@@ -103,7 +123,11 @@ export class Transaction extends Entity {
 
   get token(): string {
     let value = this.get("token");
-    return value!.toString();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toString();
+    }
   }
 
   set token(value: string) {
@@ -112,7 +136,11 @@ export class Transaction extends Entity {
 
   get txHash(): Bytes {
     let value = this.get("txHash");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set txHash(value: Bytes) {
@@ -206,7 +234,11 @@ export class Transaction extends Entity {
 
   get lastUpdatedTimestamp(): BigInt {
     let value = this.get("lastUpdatedTimestamp");
-    return value!.toBigInt();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigInt();
+    }
   }
 
   set lastUpdatedTimestamp(value: BigInt) {
@@ -215,7 +247,11 @@ export class Transaction extends Entity {
 
   get from(): Bytes {
     let value = this.get("from");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set from(value: Bytes) {
@@ -224,7 +260,11 @@ export class Transaction extends Entity {
 
   get to(): Bytes {
     let value = this.get("to");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set to(value: Bytes) {
@@ -233,7 +273,11 @@ export class Transaction extends Entity {
 
   get value(): BigInt {
     let value = this.get("value");
-    return value!.toBigInt();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigInt();
+    }
   }
 
   set value(value: BigInt) {
@@ -265,7 +309,11 @@ export class TokenDayData extends Entity {
 
   get id(): string {
     let value = this.get("id");
-    return value!.toString();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toString();
+    }
   }
 
   set id(value: string) {
@@ -274,7 +322,11 @@ export class TokenDayData extends Entity {
 
   get dayTimestamp(): i32 {
     let value = this.get("dayTimestamp");
-    return value!.toI32();
+    if (!value || value.kind == ValueKind.NULL) {
+      return 0;
+    } else {
+      return value.toI32();
+    }
   }
 
   set dayTimestamp(value: i32) {
@@ -283,7 +335,11 @@ export class TokenDayData extends Entity {
 
   get token(): string {
     let value = this.get("token");
-    return value!.toString();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toString();
+    }
   }
 
   set token(value: string) {
@@ -292,7 +348,11 @@ export class TokenDayData extends Entity {
 
   get dailyVolumeToken(): BigDecimal {
     let value = this.get("dailyVolumeToken");
-    return value!.toBigDecimal();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigDecimal();
+    }
   }
 
   set dailyVolumeToken(value: BigDecimal) {
@@ -301,7 +361,11 @@ export class TokenDayData extends Entity {
 
   get outDailyVolumeToken(): BigDecimal {
     let value = this.get("outDailyVolumeToken");
-    return value!.toBigDecimal();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigDecimal();
+    }
   }
 
   set outDailyVolumeToken(value: BigDecimal) {
@@ -310,7 +374,11 @@ export class TokenDayData extends Entity {
 
   get inDailyVolumeToken(): BigDecimal {
     let value = this.get("inDailyVolumeToken");
-    return value!.toBigDecimal();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigDecimal();
+    }
   }
 
   set inDailyVolumeToken(value: BigDecimal) {
@@ -319,7 +387,11 @@ export class TokenDayData extends Entity {
 
   get dailyGasConsumed(): BigDecimal {
     let value = this.get("dailyGasConsumed");
-    return value!.toBigDecimal();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigDecimal();
+    }
   }
 
   set dailyGasConsumed(value: BigDecimal) {
@@ -328,7 +400,11 @@ export class TokenDayData extends Entity {
 
   get outDailyGasConsumed(): BigDecimal {
     let value = this.get("outDailyGasConsumed");
-    return value!.toBigDecimal();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigDecimal();
+    }
   }
 
   set outDailyGasConsumed(value: BigDecimal) {
@@ -337,7 +413,11 @@ export class TokenDayData extends Entity {
 
   get inDailyGasConsumed(): BigDecimal {
     let value = this.get("inDailyGasConsumed");
-    return value!.toBigDecimal();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigDecimal();
+    }
   }
 
   set inDailyGasConsumed(value: BigDecimal) {
@@ -346,7 +426,11 @@ export class TokenDayData extends Entity {
 
   get dailyTxns(): BigInt {
     let value = this.get("dailyTxns");
-    return value!.toBigInt();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigInt();
+    }
   }
 
   set dailyTxns(value: BigInt) {
@@ -355,7 +439,11 @@ export class TokenDayData extends Entity {
 
   get outDailyTxns(): BigDecimal {
     let value = this.get("outDailyTxns");
-    return value!.toBigDecimal();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigDecimal();
+    }
   }
 
   set outDailyTxns(value: BigDecimal) {
@@ -364,7 +452,11 @@ export class TokenDayData extends Entity {
 
   get inDailyTxns(): BigDecimal {
     let value = this.get("inDailyTxns");
-    return value!.toBigDecimal();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigDecimal();
+    }
   }
 
   set inDailyTxns(value: BigDecimal) {
@@ -373,7 +465,11 @@ export class TokenDayData extends Entity {
 
   get lastUpdatedTimestamp(): BigInt {
     let value = this.get("lastUpdatedTimestamp");
-    return value!.toBigInt();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigInt();
+    }
   }
 
   set lastUpdatedTimestamp(value: BigInt) {
@@ -405,7 +501,11 @@ export class User extends Entity {
 
   get id(): string {
     let value = this.get("id");
-    return value!.toString();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toString();
+    }
   }
 
   set id(value: string) {
@@ -414,7 +514,11 @@ export class User extends Entity {
 
   get user(): Bytes {
     let value = this.get("user");
-    return value!.toBytes();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBytes();
+    }
   }
 
   set user(value: Bytes) {
@@ -423,7 +527,11 @@ export class User extends Entity {
 
   get token(): string {
     let value = this.get("token");
-    return value!.toString();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toString();
+    }
   }
 
   set token(value: string) {
@@ -432,7 +540,11 @@ export class User extends Entity {
 
   get lastUpdatedTimestamp(): BigInt {
     let value = this.get("lastUpdatedTimestamp");
-    return value!.toBigInt();
+    if (!value || value.kind == ValueKind.NULL) {
+      throw new Error("Cannot return null for a required field.");
+    } else {
+      return value.toBigInt();
+    }
   }
 
   set lastUpdatedTimestamp(value: BigInt) {

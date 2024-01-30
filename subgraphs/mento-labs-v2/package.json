@@ -1,0 +1,16 @@
+{
+  "name": "mento_labs_v2",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://celo-graph-api.dapplooker.com/deploy/ dapplooker/mento_labs_v2",
+    "create-local": "graph create --node http://13.50.183.114:8020/ dapplooker/mento_labs_v2",
+    "remove-local": "graph remove --node http://13.50.183.114:8020/ dapplooker/mento_labs_v2",
+    "deploy-local": "graph deploy --node http://13.50.183.114:8020/ --ipfs http://13.50.183.114:5001 dapplooker/mento_labs_v2"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.47.2",
+    "@graphprotocol/graph-ts": "0.29.3"
+  }
+}
