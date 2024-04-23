@@ -194,7 +194,7 @@ dataSources:
     name: USDC
     network: celo
     source:
-      address: "0x37f750B7cC259A2f741AF45294f6a16572CF5cAd"
+      address: "0xceba9300f2b948710d2653dd7b07f33a8b32118c"
       abi: USDC
       startBlock: 13587390
     mapping:
@@ -314,6 +314,33 @@ dataSources:
         - Token
       abis:
         - name: UBE
+          file: ./abis/ERC20.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+        - name: ERC20SymbolBytes
+          file: ./abis/ERC20SymbolBytes.json
+        - name: ERC20NameBytes
+          file: ./abis/ERC20NameBytes.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/mappings/core.ts
+  - kind: ethereum/contract
+    name: USDCoin
+    network: celo
+    source:
+      address: "0x37f750B7cC259A2f741AF45294f6a16572CF5cAd"
+      abi: USDCoin
+      startBlock: 13034210
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Token
+      abis:
+        - name: USDCoin
           file: ./abis/ERC20.json
         - name: ERC20
           file: ./abis/ERC20.json
